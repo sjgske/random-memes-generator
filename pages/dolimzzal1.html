@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    <title>탈주할거야아아아</title>
+    <link rel="stylesheet" type="text/css" href="../assets/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+</head>
+
+<body>
+<div class="box">
+    <div class="title">
+        <button type="button" class="btm_image" id="img_btn" onclick="location.href='home.html'">
+            <img src="https://ifh.cc/g/p52CZn.png" width="300"></button>
+    </div>
+
+    <div class="dollimzzal">
+        <a href="#" style="color:#FFA500;">돌려돌려돌림짤</a>
+    </div>
+
+    <div class="navbar" style="text-align: center; margin:auto; width: 1200px;">
+        <form class="form-inline" style="margin: 0 auto;">
+            <input class="nav_input" id="search_area" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
+            <button class="nav_btn" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <div id='autoMaker'></div>
+
+    <div class="badges">
+        <a href="#" class="badge badge-cel">#셀럽</a>
+        <a href="#" class="badge badge-umzzal" style="background-color: #F4B183;">#인스타</a>
+        <a href="#" class="badge badge-character" style="background-color: #a2c4c9ff;">#드라마</a>
+        <a href="#" class="badge badge-drama" style="background-color: #FFC000;">#영화</a>
+        <a href="#" class="badge badge-enter" style="background-color: #A5A5A5;">#예능</a>
+        <a href="#" class="badge badge-emotion" style="background-color: #9fc5e8ff;">#캐릭터</a>
+        <a href="#" class="badge badge-animal" style="background-color: #F4B183;">#동물</a>
+        <a href="#" class="badge badge-meme" style="background-color: #FFA500;">#밈</a>
+        <a href="#" class="badge badge-character" style="background-color: #a2c4c9ff;">#애니</a>
+        <a href="#" class="badge badge-byung" style="background-color: #9fc5e8ff;">#웹툰</a>
+        <a href="#" class="badge badge-umzzal" style="background-color: #FFC000;">#케이팝</a>
+        <a href="#" class="badge badge-character" style="background-color: #a2c4c9ff;">#감성</a>
+    </div>
+
+    <div class="lead">
+        <h1 style="font-family:'Black Han Sans', sans-serif;">돌려돌려~ 돌림짤!</h2>
+        <p style="font-family: 'Cafe24SsurroundAir';">오늘의 짤을 알아봅시다! stop버튼을 눌러주세요!</p>
+    </div>
+
+    <div class="zzal-box-1">
+        <div class="random-img" id="random-play"></div>
+        <button class="stop-btn" onclick="location.href='dolimzzal2.html'">S T O P</button>
+    </div>
+
+</div>
+
+
+<script>
+    var ref = [
+    {key:1, name:'셀럽'},
+        {key:2, name:'인스타'},
+        {key:3, name:'드라마'},
+        {key:4, name:'영화'},
+        {key:5, name:'예능'},
+        {key:6, name:'캐릭터'},
+        {key:7, name:'동물'},
+        {key:8, name:'애니'},
+        {key:9, name:'웹툰'},
+        {key:10, name:'케이팝'},
+        {key:11, name:'감성'}
+    ];
+    
+    var isComplete = false;  //autoMaker 자식이 선택 되었는지 여부
+    $('#search_area').keyup(function(){
+        var txt = $(this).val();
+        if(txt != ''){  //빈줄이 들어오면
+            $('#autoMaker').children().remove();
+    
+            ref.forEach(function(arg){
+                if(arg.name.indexOf(txt) > -1 ){
+                    $('#autoMaker').append(
+                        $('<div>').text(arg.name).attr({'key':arg.key})
+                    );		
+                }
+            });
+            $('#autoMaker').children().each(function(){
+                $(this).click(function(){
+                    $('#search_area').val($(this).text());
+                    $('#autoMaker').children().remove();	
+                    isComplete = true;
+                });
+            });			
+        } else {
+            $('#autoMaker').children().remove();
+        }  
+    });
+    
+</script>
+</body>
+</html>
