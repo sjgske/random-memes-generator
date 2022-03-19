@@ -7,7 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
     <title>덤비시조 | 돌려~돌려~돌림짤!</title>
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" type="text/css" href="../style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -64,8 +64,36 @@
         <a href="/" class="badge orange">#케이팝</a>
         <a href="/" class="badge light-orange">#감성</a>
       </div>
-      <div class="columns" id="columns"></div>
     </nav>
+
+    <main class="card">
+      <div class="card-text">
+        <h1>당첨!!</h1>
+      </div>
+      <div class="card-image-box">
+        <div class="result-image"></div>
+        <div class="result-text"></div>
+      </div>
+
+      <div class="icon-group">
+        <button type="submit">
+          <i
+            id="heart-icon"
+            class="fas fa-heart fa-2x"
+            style="color: #a5a5a5"
+          ></i>
+          <span>Like</span>
+        </button>
+        <button type="submit" onclick="location.href='random-start.html'">
+          <i class="fas fa-undo-alt fa-2x"></i>
+          <span>Replay</span>
+        </button>
+        <button type="submit">
+          <i class="fas fa-sign-in-alt fa-rotate-90 fa-2x"></i>
+          <span>Download</span>
+        </button>
+      </div>
+    </main>
 
     <script src="../script.js"></script>
   </body>
