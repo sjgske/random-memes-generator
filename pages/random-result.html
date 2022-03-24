@@ -20,7 +20,7 @@
   <body>
     <header class="header">
       <h1 class="logo">
-        <a class="logo" href="/home">
+        <a class="logo" href="/home.html">
           <img
             src="https://ifh.cc/g/p52CZn.png"
             alt="덤비시짤"
@@ -29,7 +29,7 @@
         </a>
       </h1>
 
-      <a class="side-link" href="/">돌려돌려~돌림짤!</a>
+      <a class="side-link" href="/random-start.html">돌려돌려~돌림짤!</a>
     </header>
 
     <nav class="nav-bar">
@@ -66,7 +66,7 @@
       </div>
     </nav>
 
-    <main class="card">
+    <main id="result" class="card">
       <div class="card-text">
         <h1>당첨!!</h1>
         <p>오늘의 짤은 바로바로 이거!</p>
@@ -76,15 +76,15 @@
       </div>
 
       <div class="icon-group">
-        <button class="heart-button" type="button">
+        <button class="icon-button heart-button" type="button">
           <i id="heart-icon" class="icon fas fa-heart fa-2x"></i>
           <span>Like</span>
         </button>
-        <button type="button" onclick="location.href='random-start.html'">
+        <a class="icon-button" href="random-start.html">
           <i class="icon fas fa-undo-alt fa-2x"></i>
           <span>Replay</span>
-        </button>
-        <button type="button">
+        </a>
+        <button class="icon-button" type="button">
           <i class="icon fas fa-sign-in-alt fa-rotate-90 fa-2x"></i>
           <span>Download</span>
         </button>

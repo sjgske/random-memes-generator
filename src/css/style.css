@@ -1,0 +1,405 @@
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #ffc000;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+span,
+p {
+  font-family: "Cafe24SsurroundAir";
+}
+
+/* Header */
+.header {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  padding-top: 20px;
+  margin: 0 auto;
+  width: 220px;
+}
+
+.logo img {
+  width: 220px;
+  height: auto;
+}
+
+.side-link {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 15px;
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 22px;
+  color: #ffa500;
+}
+
+.side-link:hover {
+  color: #ffc000;
+  text-decoration: underline;
+}
+
+/* Search bar */
+.nav-bar {
+  margin: 0 auto;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.search-input {
+  flex-grow: 1;
+  height: 48px;
+  padding: 0 15px;
+  margin-right: 15px;
+  border: 2px solid #ffa500;
+  border-radius: 10px;
+  font-family: "Cafe24SsurroundAir";
+}
+
+.search-input {
+  border: 2px solid #ffa500;
+}
+
+.search-btn {
+  width: 68px;
+  height: 48px;
+  color: white;
+  border-radius: 10px;
+  background-color: #ffa500;
+  transition: background-color 200ms ease-in-out;
+}
+
+.search-btn:hover {
+  background-color: #ffc000;
+}
+
+.search-auto {
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 3px;
+  margin: 3px 0 0 50px;
+  background-color: #fff;
+  font-family: "Cafe24SsurroundAir";
+  cursor: pointer;
+}
+
+.search-auto > div {
+  padding: 5px;
+  margin-top: 3px;
+  border-radius: 15px;
+  border: 2px solid #ffc000;
+}
+.search-auto > div:hover {
+  background: #ffc000;
+}
+
+/* Badges */
+.badge-group {
+  width: 80vw;
+  padding: 15px 5px;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.badge {
+  display: inline-block;
+  width: 96px;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 8px;
+  font-family: "Cafe24SsurroundAir";
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+
+.badge.orange {
+  background-color: #ffa500;
+}
+
+.badge.light-orange {
+  background-color: #ffc000;
+}
+
+.badge.grey {
+  background-color: #a5a5a5;
+}
+
+.badge.blue {
+  background-color: #9fc5e8ff;
+}
+
+.badge:hover {
+  color: red;
+}
+
+/* Columns */
+.columns {
+  width: 80vw;
+  padding: 30px 0;
+  margin: 0 auto;
+  column-count: 5;
+  column-gap: 1.8vw;
+}
+
+.columns figure {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.columns figure img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Card */
+.card {
+  padding-top: 50px;
+}
+
+.card-text {
+  text-align: center;
+  color: #ffa500;
+}
+
+.card-text h1 {
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 36px;
+}
+
+.card-image-box {
+  width: 680px;
+  height: 500px;
+  margin: 30px auto 40px;
+  border: 2px solid #ffa500;
+  border-radius: 50px;
+  padding: 30px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+/* Card - Start page */
+.sample-image {
+  width: 450px;
+  height: 300px;
+  margin: 30px auto;
+  background-image: url("https://cdn.entermedia.co.kr/news/photo/202108/27190_50134_4557.jpg");
+  background-position: center;
+}
+
+.stop-btn {
+  display: block;
+  width: 180px;
+  padding: 12px;
+  margin: 20px auto;
+  background-color: #ffa500;
+  border-radius: 16px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+/* Card - Result page */
+.result-image {
+  position: relative;
+  height: 420px;
+}
+
+.result-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 350px;
+  height: auto;
+}
+
+.result-text {
+  font-weight: 700;
+  text-align: center;
+}
+
+.icon-group {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.icon-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 35px;
+  font-size: 15px;
+  background-color: none;
+  margin-right: 12px;
+}
+
+.icon-button:last-child {
+  margin-right: 0;
+}
+
+.icon-group .icon {
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.icon-group .fa-heart {
+  color: #a5a5a5;
+}
+
+.icon-group svg.liked {
+  color: #ff4a4a;
+}
+
+/* Footer */
+.footer {
+  padding: 35px 0;
+  margin-top: 80px;
+  background-color: #e3e3e3;
+  text-align: center;
+}
+
+/* Loading */
+.loading-title {
+  padding: 70px 0;
+  font-family: "Cafe24SsurroundAir";
+  font-size: 40px;
+  color: #ffa500;
+  text-align: center;
+}
+
+.loading-animation {
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.dot-1,
+.dot-2,
+.dot-3 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.dot-1 {
+  animation: dot-1 2.5s ease-in-out infinite;
+}
+
+.dot-2 {
+  animation: dot-2 2.5s ease-in-out infinite;
+}
+
+.dot-3 {
+  animation: dot-3 2.5s ease-in-out infinite;
+}
+
+@keyframes dot-1 {
+  0% {
+    background-color: #ffd382;
+  }
+
+  15%,
+  30% {
+    background-color: #ffa500;
+  }
+
+  45%,
+  100% {
+    background-color: #ffd382;
+  }
+}
+
+@keyframes dot-2 {
+  0%,
+  15% {
+    background-color: #ffd382;
+  }
+
+  45%,
+  60% {
+    background-color: #ffa500;
+  }
+
+  65%,
+  100% {
+    background-color: #ffd382;
+  }
+}
+
+@keyframes dot-3 {
+  0%,
+  50% {
+    background-color: #ffd382;
+  }
+
+  70%,
+  85% {
+    background-color: #ffa500;
+  }
+
+  100% {
+    background-color: #ffd382;
+  }
+}
+
+/* mobile screen */
+
+@media screen and (max-width: 992px) {
+  .header,
+  .search-form,
+  .badge-group {
+    width: 85vw;
+  }
+
+  .columns {
+    column-count: 4;
+  }
+}
