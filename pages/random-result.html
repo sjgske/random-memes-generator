@@ -69,31 +69,33 @@
     <main class="card">
       <div class="card-text">
         <h1>당첨!!</h1>
+        <p>오늘의 짤은 바로바로 이거!</p>
       </div>
       <div class="card-image-box">
         <div class="result-image"></div>
-        <div class="result-text"></div>
       </div>
 
       <div class="icon-group">
-        <button type="submit">
-          <i
-            id="heart-icon"
-            class="fas fa-heart fa-2x"
-            style="color: #a5a5a5"
-          ></i>
+        <button class="heart-button" type="button">
+          <i id="heart-icon" class="icon fas fa-heart fa-2x"></i>
           <span>Like</span>
         </button>
-        <button type="submit" onclick="location.href='random-start.html'">
-          <i class="fas fa-undo-alt fa-2x"></i>
+        <button type="button" onclick="location.href='random-start.html'">
+          <i class="icon fas fa-undo-alt fa-2x"></i>
           <span>Replay</span>
         </button>
-        <button type="submit">
-          <i class="fas fa-sign-in-alt fa-rotate-90 fa-2x"></i>
+        <button type="button">
+          <i class="icon fas fa-sign-in-alt fa-rotate-90 fa-2x"></i>
           <span>Download</span>
         </button>
       </div>
     </main>
+
+    <footer class="footer">
+      <span>스파르타코딩클럽 내일배움단</span><br />
+      <span>메이킹프로젝트 4기</span><br />
+      <span>덤비시조</span>
+    </footer>
 
     <script src="../script.js"></script>
   </body>
