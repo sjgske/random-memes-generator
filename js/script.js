@@ -40,6 +40,7 @@ $("#search_area").keyup(function () {
   }
 });
 
+// Listing images
 $(document).ready(function () {
   listing();
 });
@@ -48,7 +49,7 @@ function listing() {
   $.ajax({
     type: "GET",
     url: "https://randomzzal.herokuapp.com/https://openapi.naver.com/v1/search/image",
-    data: { query: "짤방", display: 50 },
+    data: { query: "짤 모음", display: 50 },
     headers: {
       "X-Naver-Client-Id": "M0i7ZMMD6rcJT_kErnkU",
       "X-Naver-Client-Secret": "l4tflp41vy",
@@ -58,8 +59,8 @@ function listing() {
       for (let i = 0; i < items.length; i++) {
         let imgurl = items[i]["thumbnail"];
 
-        let temp_html = `<figure>
-                              <img src="${imgurl}">
+        let temp_html = `<figure class="figure">
+                            <img src="${imgurl}">
                           </figure>`;
         $("#columns").append(temp_html);
       }
@@ -67,6 +68,7 @@ function listing() {
   });
 }
 
+// Generate random images
 $(document).ready(function () {
   randomzzal();
 });
