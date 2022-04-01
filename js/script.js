@@ -49,7 +49,7 @@ function listing() {
   $.ajax({
     type: "GET",
     url: "https://randomzzal.herokuapp.com/https://openapi.naver.com/v1/search/image",
-    data: { query: "짤 모음", display: 50 },
+    data: { query: "웃긴 짤 모음", display: 50 },
     headers: {
       "X-Naver-Client-Id": "M0i7ZMMD6rcJT_kErnkU",
       "X-Naver-Client-Secret": "l4tflp41vy",
@@ -77,7 +77,7 @@ function randomzzal() {
   $.ajax({
     type: "GET",
     url: "https://randomzzal.herokuapp.com/https://openapi.naver.com/v1/search/image",
-    data: { query: "웃긴 짤", display: 50 },
+    data: { query: "웃긴 짤 모음", display: 50 },
     headers: {
       "X-Naver-Client-Id": "M0i7ZMMD6rcJT_kErnkU",
       "X-Naver-Client-Secret": "l4tflp41vy",
